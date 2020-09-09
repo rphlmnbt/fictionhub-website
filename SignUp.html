@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+    <title>FictionHub - Explore Worlds</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="FHScripts.js"></script>
+    <link href="https://allfont.net/allfont.css?fonts=agency-fb" rel="stylesheet" type="text/css">
+    <link href="https://allfont.net/allfont.css?fonts=agency-fb-bold" rel="stylesheet" type="text/css">
+	<link href="style.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="navbar">
+        <div id="banner">
+            <a href="Landing.html"><img src="Images/FHLogo.png" style="height: 65px; float: left;"></a>
+            <br>
+            <p id="loginBtn"><a href="Login.html" style="color: black;">LOG IN &#9661; &nbsp;</a></p>
+        </div>
+        
+        <ul>
+          <li><a href="Home.html">HOME</a></li>
+                <li><a>BOOKS</a>
+                    <ul>
+                        <li><a href="Novels.html">NOVELS</a></li>
+                        <li><a href="Comics.html">COMICS</a></li>
+                        <li><a href="Lightnovels.html">LIGHT NOVELS</a></li>
+                    </ul>
+                </li>
+                <li><a>VIDEOS</a>
+                    <ul>
+                        <li><a href="Cartoons.html">CARTOONS</a></li>
+                        <li><a href="Anime.html">ANIME MOVIES</a></li>
+                        <li><a href="Film.html">BOOK FILMS</a></li>
+                    </ul>
+                </li>
+                <li><a>MORE OF US</a>
+                    <ul>
+                        <li><a href="AboutUs.html">ABOUT US</a></li>
+                        <li><a href="ContactUs.html">CONTACT US</a></li>
+                    </ul>
+                </li>
+                <li><a href="Submit.html">SUBMIT REVIEW</a></li>
+                
+      </ul>  
+    </div>
+    <div class="main">
+        <img src="Images/login.png" class="user" height="100" width="100">  
+        <div class="loginBox">
+            <h2>Sign Up</h2>
+            <form name="signup" class="form" method="post">
+                <label>Username</label>
+                <input type="text" name="name" placeholder="Enter Username">
+                <label>Password</label>
+                <input type="password" name="password" id="password" placeholder="Enter Password">
+                <label>Verify Password</label>
+                <input type="password" name="verpassword" id="verpassword" placeholder="Enter Password Again">
+                <input type="checkbox" onclick="showPassVer()" style="width:auto; margin-bottom: 2vw ">Show Password
+                <input type="submit" value="Sign Up"  onclick="return validateSignUp()">
+                <a style="color: black" href="Login.html">Back To Login</a>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
