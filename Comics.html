@@ -12,110 +12,125 @@
 
 <body>
     <button id="back-to-top-btn" onclick="smoothScrollBackToTop()"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
-    <div id="navbar">
-        <div id="banner">
-            <a href="Landing.html"><img src="Images/FHLogo.png" style="height: 65px; float: left;"></a>
-            <br>
-            <p id="loginBtn"><a href="Login.html" style="color: black;">LOG IN &#9661; &nbsp;</a></p>
+    <div id="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+      </div>
+      <script>
+        setTimeout(fadeOut(), 2000);
+      </script>
+    <div id="maincontent">
+        <div id="navbar">
+            <div id="banner">
+                <a href="Landing.html"><img src="Images/FHLogo.png" style="height: 65px; float: left;"></a>
+                <br>
+                <p id="loginBtn"><a href="Login.html" id ="log" style="color: black;" onclick="logOut()">LOG IN &#9661; &nbsp;</a></p>
+                <script>
+                    if(checkLog()) {
+                        document.getElementById("log").innerHTML = "LOG OUT &#9661; &nbsp;";
+                    }
+                </script>
+            </div>
+            
+            <ul>
+              <li><a href="Home.html">HOME</a></li>
+                    <li><a>BOOKS</a>
+                        <ul>
+                            <li><a href="Novels.html">NOVELS</a></li>
+                            <li><a href="Comics.html">COMICS</a></li>
+                            <li><a href="Lightnovels.html">LIGHT NOVELS</a></li>
+                        </ul>
+                    </li>
+                    <li><a>VIDEOS</a>
+                        <ul>
+                            <li><a href="Cartoons.html">CARTOONS</a></li>
+                            <li><a href="Anime.html">ANIME MOVIES</a></li>
+                            <li><a href="Film.html">BOOK FILMS</a></li>
+                        </ul>
+                    </li>
+                    <li><a>MORE OF US</a>
+                        <ul>
+                            <li><a href="AboutUs.html">ABOUT US</a></li>
+                            <li><a href="ContactUs.html">CONTACT US</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Submit.html">SUBMIT REVIEW</a></li>
+                    
+          </ul>  
         </div>
         
-        <ul>
-          <li><a href="Home.html">HOME</a></li>
-                <li><a>BOOKS</a>
-                    <ul>
-                        <li><a href="Novels.html">NOVELS</a></li>
-                        <li><a href="Comics.html">COMICS</a></li>
-                        <li><a href="Lightnovels.html">LIGHT NOVELS</a></li>
-                    </ul>
-                </li>
-                <li><a>VIDEOS</a>
-                    <ul>
-                        <li><a href="Cartoons.html">CARTOONS</a></li>
-                        <li><a href="Anime.html">ANIME MOVIES</a></li>
-                        <li><a href="Film.html">BOOK FILMS</a></li>
-                    </ul>
-                </li>
-                <li><a>MORE OF US</a>
-                    <ul>
-                        <li><a href="AboutUs.html">ABOUT US</a></li>
-                        <li><a href="ContactUs.html">CONTACT US</a></li>
-                    </ul>
-                </li>
-                <li><a href="Submit.html">SUBMIT REVIEW</a></li>
-                
-      </ul>  
-    </div>
     
-
-    <div class="Sidenav" class="sidenav">
-        <a href="#one" id="oneS"><p>Batman</p></a>
-        <a href="#two" id="twoS"><p>Saga</p></a>
-        <a href="#three" id="threeS"><p>Invincible</p></a>
-        <a href="#four" id="fourS"><p>Spiderman</p></a>
-    </div>
-
-    <div style="padding-top: 1vw; padding-bottom: 2vw;">
-        <div class="books">
-            <div style="width: 100%;">
-                <h2 style="text-align:center" id="one">Batman: The Killing Joke</h2>
-                <img src="Images/btm.jpg" style="float: left; width: 100%;max-width: 250px; height: auto; padding-right: 5%;">
-                <p style="text-align: justify; font-weight: 600;">
-                    For the first time the Joker's origin is revealed in this tale of insanity and human perseverance. Looking to prove that any man can be pushed past his breaking point and go mad, the Joker attempts to drive Commissioner Gordon insane.
-                    <br><br>
-                    After shooting and permanently paralyzing his daughter Barbara (a.k.a. Batgirl), the Joker kidnaps the commissioner and attacks his mind in hopes of breaking the man.
-                    <br><br>
-                    But refusing to give up, Gordon maintains his sanity with the help of Batman in an effort to beset the madman.
-                </p> 
-                <br><br><br><br><br><br><br><br><br>
-                <a href="https://www.goodreads.com/book/show/96358.Batman"><img src="Images/gr.png" style="width: 50px; float: left; margin-left: 2%;"> <p style="display: block; float:left;margin-left:2%; margin-top: 1.2%; font-weight: 800;color: black;">Check it out on Goodreads!</p></a>
-                <a href="https://www.amazon.com/gp/product/0930289455/"><img src="Images/amazon.png" style="width: 50px; float: left; margin-left: 10%;"> <p style="display: block; float:left;margin-left:2%; margin-top: 1.2%; font-weight: 800; color: black;">Buy it on Amazon!</p></a>
-                <br><br><br>
-                <hr style="border: 1px solid black;">
-            </div>
-            <div style="width: 100%;">
-                <h2 style="text-align:center" id="two">Saga</h2>
-                <img src="Images/saga.jpg" style="float: left; width: 100%;max-width: 250px; height: auto; padding-right: 5%;">
-                <p style="text-align: justify; font-weight: 600;">
-                    When two soldiers from opposite sides of a never-ending galactic war fall in love, they risk everything to bring a fragile new life into a dangerous old universe.
+        <div class="Sidenav" class="sidenav">
+            <a href="#one" id="oneS"><p>Batman</p></a>
+            <a href="#two" id="twoS"><p>Saga</p></a>
+            <a href="#three" id="threeS"><p>Invincible</p></a>
+            <a href="#four" id="fourS"><p>Spiderman</p></a>
+        </div>
+    
+        <div style="padding-top: 1vw; padding-bottom: 4vw;">
+            <div class="books">
+                <div style="width: 100%;">
+                    <h2 style="text-align:center" id="one">Batman: The Killing Joke</h2>
+                    <img src="Images/btm.jpg" style="float: left; width: 100%;max-width: 250px; height: auto; padding-right: 5%;">
+                    <p style="text-align: justify; font-weight: 600;">
+                        For the first time the Joker's origin is revealed in this tale of insanity and human perseverance. Looking to prove that any man can be pushed past his breaking point and go mad, the Joker attempts to drive Commissioner Gordon insane.
+                        <br><br>
+                        After shooting and permanently paralyzing his daughter Barbara (a.k.a. Batgirl), the Joker kidnaps the commissioner and attacks his mind in hopes of breaking the man.
+                        <br><br>
+                        But refusing to give up, Gordon maintains his sanity with the help of Batman in an effort to beset the madman.
+                    </p> 
+                    <br><br><br><br><br><br><br><br><br>
+                    <a href="https://www.goodreads.com/book/show/96358.Batman"><img src="Images/gr.png" style="width: 50px; float: left; margin-left: 2%;"> <p style="display: block; float:left;margin-left:2%; margin-top: 1.2%; font-weight: 800;color: black;">Check it out on Goodreads!</p></a>
+                    <a href="https://www.amazon.com/gp/product/0930289455/"><img src="Images/amazon.png" style="width: 50px; float: left; margin-left: 10%;"> <p style="display: block; float:left;margin-left:2%; margin-top: 1.2%; font-weight: 800; color: black;">Buy it on Amazon!</p></a>
                     <br><br><br>
-                    From bestselling writer Brian K. Vaughan, Saga is the sweeping tale of one young family fighting to find their place in the worlds. Fantasy and science fiction are wed like never before in this sexy, subversive drama for adults.
+                    <hr style="border: 1px solid black;">
+                </div>
+                <div style="width: 100%;">
+                    <h2 style="text-align:center" id="two">Saga</h2>
+                    <img src="Images/saga.jpg" style="float: left; width: 100%;max-width: 250px; height: auto; padding-right: 5%;">
+                    <p style="text-align: justify; font-weight: 600;">
+                        When two soldiers from opposite sides of a never-ending galactic war fall in love, they risk everything to bring a fragile new life into a dangerous old universe.
+                        <br><br><br>
+                        From bestselling writer Brian K. Vaughan, Saga is the sweeping tale of one young family fighting to find their place in the worlds. Fantasy and science fiction are wed like never before in this sexy, subversive drama for adults.
+                        <br><br><br>
+                    </p> 
+                    <br><br><br><br><br><br><br><br><br>
+                    <a href="https://www.goodreads.com/book/show/15704307-saga-vol-1"><img src="Images/gr.png" style="width: 50px; float: left; margin-left: 2%;"> <p style="display: block; float:left;margin-left:2%; margin-top: 1.2%; font-weight: 800;color: black;">Check it out on Goodreads!</p></a>
+                    <a href="https://www.amazon.com/gp/product/1607066017/"><img src="Images/amazon.png" style="width: 50px; float: left; margin-left: 10%;"> <p style="display: block; float:left;margin-left:2%; margin-top: 1.2%; font-weight: 800; color: black;">Buy it on Amazon!</p></a>
                     <br><br><br>
-                </p> 
-                <br><br><br><br><br><br><br><br><br>
-                <a href="https://www.goodreads.com/book/show/15704307-saga-vol-1"><img src="Images/gr.png" style="width: 50px; float: left; margin-left: 2%;"> <p style="display: block; float:left;margin-left:2%; margin-top: 1.2%; font-weight: 800;color: black;">Check it out on Goodreads!</p></a>
-                <a href="https://www.amazon.com/gp/product/1607066017/"><img src="Images/amazon.png" style="width: 50px; float: left; margin-left: 10%;"> <p style="display: block; float:left;margin-left:2%; margin-top: 1.2%; font-weight: 800; color: black;">Buy it on Amazon!</p></a>
-                <br><br><br>
-                <hr style="border: 1px solid black;">
-            </div>
-            <div style="width: 100%;">
-                <h2 style="text-align:center" id="three">Invincible</h2>
-                <img src="Images/inv.jpg" style="float: left; width: 100%;max-width: 250px; height: auto; padding-right: 5%;">
-                <p style="text-align: justify; font-weight: 600;">
-                    Back in print! Mark Grayson is just like most everyone else his age. The only major difference being that his dad is the most powerful superhero on the planet! And, Mark seems to be inheriting his father's powers! See Mark thwart super-villains, alien invasions and all sorts of craziness, as he gets the hang of all this super-heroing stuff.
-
-                </p> 
-                <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                <a href="https://www.goodreads.com/book/show/214867.Invincible_Vol_1"><img src="Images/gr.png" style="width: 50px; float: left; margin-left: 2%;"> <p style="display: block; float:left;margin-left:2%; margin-top: 1.2%; font-weight: 800;color: black;">Check it out on Goodreads!</p></a>
-                <a href="https://www.amazon.com/gp/product/1582407118"><img src="Images/amazon.png" style="width: 50px; float: left; margin-left: 10%;"> <p style="display: block; float:left;margin-left:2%; margin-top: 1.2%; font-weight: 800; color: black;">Buy it on Amazon!</p></a>
-                <br><br><br>
-                <hr style="border: 1px solid black;">
-            </div>
-            <div style="width: 100%;">
-                <h2 style="text-align:center" id="four">Ultimate Spider-Man</h2>
-                <img src="Images/spd.jpg" style="float: left; width: 100%;max-width: 250px; height: auto; padding-right: 5%;">
-                <p style="text-align: justify; font-weight: 600;">
-                    Almost ten years ago, Ultimate Spider-Man launched the Ultimate Universe, a reinvention of the Marvel Universe that defied the odds and every expectation.
+                    <hr style="border: 1px solid black;">
+                </div>
+                <div style="width: 100%;">
+                    <h2 style="text-align:center" id="three">Invincible</h2>
+                    <img src="Images/inv.jpg" style="float: left; width: 100%;max-width: 250px; height: auto; padding-right: 5%;">
+                    <p style="text-align: justify; font-weight: 600;">
+                        Back in print! Mark Grayson is just like most everyone else his age. The only major difference being that his dad is the most powerful superhero on the planet! And, Mark seems to be inheriting his father's powers! See Mark thwart super-villains, alien invasions and all sorts of craziness, as he gets the hang of all this super-heroing stuff.
+    
+                    </p> 
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <a href="https://www.goodreads.com/book/show/214867.Invincible_Vol_1"><img src="Images/gr.png" style="width: 50px; float: left; margin-left: 2%;"> <p style="display: block; float:left;margin-left:2%; margin-top: 1.2%; font-weight: 800;color: black;">Check it out on Goodreads!</p></a>
+                    <a href="https://www.amazon.com/gp/product/1582407118"><img src="Images/amazon.png" style="width: 50px; float: left; margin-left: 10%;"> <p style="display: block; float:left;margin-left:2%; margin-top: 1.2%; font-weight: 800; color: black;">Buy it on Amazon!</p></a>
                     <br><br><br>
-                    Today, it happens again: This new chapter in the life of the teenaged webslinger picks up in the aftermath of Ultimatum and completely redefines the status quo of Spider-Man for the next generation! With a new supporting cast, new villians, and maybe even a new Spider-Man, this new chapter will keep you guessing.
-                </p> 
-                <br><br><br><br><br><br><br><br><br><br>
-                <a href="https://www.goodreads.com/book/show/7159363-ultimate-comics-spider-man-volume-1"><img src="Images/gr.png" style="width: 50px; float: left; margin-left: 2%;"> <p style="display: block; float:left;margin-left:2%; margin-top: 1.2%; font-weight: 800;color: black;">Check it out on Goodreads!</p></a>
-                <a href="https://www.amazon.com/gp/product/0785140115/"><img src="Images/amazon.png" style="width: 50px; float: left; margin-left: 10%;"> <p style="display: block; float:left;margin-left:2%; margin-top: 1.2%; font-weight: 800; color: black;">Buy it on Amazon!</p></a>
-                <br><br><br>
-                <hr style="border: 1px solid black;">
+                    <hr style="border: 1px solid black;">
+                </div>
+                <div style="width: 100%;">
+                    <h2 style="text-align:center" id="four">Ultimate Spider-Man</h2>
+                    <img src="Images/spd.jpg" style="float: left; width: 100%;max-width: 250px; height: auto; padding-right: 5%;">
+                    <p style="text-align: justify; font-weight: 600;">
+                        Almost ten years ago, Ultimate Spider-Man launched the Ultimate Universe, a reinvention of the Marvel Universe that defied the odds and every expectation.
+                        <br><br><br>
+                        Today, it happens again: This new chapter in the life of the teenaged webslinger picks up in the aftermath of Ultimatum and completely redefines the status quo of Spider-Man for the next generation! With a new supporting cast, new villians, and maybe even a new Spider-Man, this new chapter will keep you guessing.
+                    </p> 
+                    <br><br><br><br><br><br><br><br><br><br>
+                    <a href="https://www.goodreads.com/book/show/7159363-ultimate-comics-spider-man-volume-1"><img src="Images/gr.png" style="width: 50px; float: left; margin-left: 2%;"> <p style="display: block; float:left;margin-left:2%; margin-top: 1.2%; font-weight: 800;color: black;">Check it out on Goodreads!</p></a>
+                    <a href="https://www.amazon.com/gp/product/0785140115/"><img src="Images/amazon.png" style="width: 50px; float: left; margin-left: 10%;"> <p style="display: block; float:left;margin-left:2%; margin-top: 1.2%; font-weight: 800; color: black;">Buy it on Amazon!</p></a>
+                    <br><br><br>
+                    <hr style="border: 1px solid black;">
+                </div>
             </div>
         </div>
     </div>
-
+    
+    <div id="footer"><p id="date" style="color: black; text-align: left; line-height: 200%; font-weight:800; display: inline;">Date: XXXXXXXX</p><p style ="display: inline; font-weight: 800;" id="currUser"></p></div>
+    <script> setDateAndUser()</script>
 </body>
 </html>

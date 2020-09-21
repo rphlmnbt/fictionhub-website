@@ -11,12 +11,24 @@
 </head>
 
 <body>
+  <div id="loader-wrapper">
+    <span class="loader"><span class="loader-inner"></span></span>
+  </div>
+  <script>
+    setTimeout(fadeOut(), 2000);
+  </script>
+
 <button id="back-to-top-btn" onclick="smoothScrollBackToTop()"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
 <div id="navbar">
   <div id="banner">
       <a href="Landing.html"><img src="Images/FHLogo.png" style="height: 65px; float: left;"></a>
       <br>
-      <p id="loginBtn"><a href="Login.html" style="color: black;">LOG IN &#9661; &nbsp;</a></p>
+      <p id="loginBtn"><a id="log" href="Login.html" style="color: black;" onclick="logOut()">LOG IN &#9661; &nbsp;</a></p>
+      <script>
+        if(checkLog()) {
+            document.getElementById("log").innerHTML = "LOG OUT &#9661; &nbsp;";
+        }
+    </script>
   </div>
   
   <ul>
@@ -96,7 +108,7 @@
     showSlides();
     </script>
 
-	<table id="featured">
+	<table id="featured" style="margin-bottom: 2vh;">
 		<tr>
 			<td class="feat">
 				<p style="font-size: 40px; padding: 0%; margin: 0%;"><b>
@@ -160,7 +172,10 @@
     </table>
     <br><br>
 
-		<script src=”https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js”></script>
-	
+    <script src=”https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js”></script>
+    <div id="footer"><p id="date" style="color: black; text-align: left; line-height: 200%; font-weight:800; display: inline;">Date: XXXXXXXX</p><p style ="display: inline; font-weight: 800;" id="currUser"></p></div>
+    <script> 
+      setDateAndUser()
+    </script>
 </body>
 </html>

@@ -12,65 +12,80 @@
 
 <body>
     <button id="back-to-top-btn" onclick="smoothScrollBackToTop()"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
-    <div id="navbar">
-        <div id="banner">
-            <a href="Landing.html"><img src="Images/FHLogo.png" style="height: 65px; float: left;"></a>
-            <br>
-            <p id="loginBtn"><a href="Login.html" style="color: black;">LOG IN &#9661; &nbsp;</a></p>
+    <div id="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+      </div>
+      <script>
+        setTimeout(fadeOut(), 2000);
+      </script>
+    <div id="maincontent">
+        <div id="navbar">
+            <div id="banner">
+                <a href="Landing.html"><img src="Images/FHLogo.png" style="height: 65px; float: left;"></a>
+                <br>
+                <p id="loginBtn"><a href="Login.html" id ="log" style="color: black;" onclick="logOut()">LOG IN &#9661; &nbsp;</a></p>
+                <script>
+                    if(checkLog()) {
+                        document.getElementById("log").innerHTML = "LOG OUT &#9661; &nbsp;";
+                    }
+                </script>
+            </div>
+            
+            <ul>
+              <li><a href="Home.html">HOME</a></li>
+                    <li><a>BOOKS</a>
+                        <ul>
+                            <li><a href="Novels.html">NOVELS</a></li>
+                            <li><a href="Comics.html">COMICS</a></li>
+                            <li><a href="Lightnovels.html">LIGHT NOVELS</a></li>
+                        </ul>
+                    </li>
+                    <li><a>VIDEOS</a>
+                        <ul>
+                            <li><a href="Cartoons.html">CARTOONS</a></li>
+                            <li><a href="Anime.html">ANIME MOVIES</a></li>
+                            <li><a href="Film.html">BOOK FILMS</a></li>
+                        </ul>
+                    </li>
+                    <li><a>MORE OF US</a>
+                        <ul>
+                            <li><a href="AboutUs.html">ABOUT US</a></li>
+                            <li><a href="ContactUs.html">CONTACT US</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Submit.html">SUBMIT REVIEW</a></li>
+                    
+          </ul>  
         </div>
         
-        <ul>
-          <li><a href="Home.html">HOME</a></li>
-                <li><a>BOOKS</a>
-                    <ul>
-                        <li><a href="Novels.html">NOVELS</a></li>
-                        <li><a href="Comics.html">COMICS</a></li>
-                        <li><a href="Lightnovels.html">LIGHT NOVELS</a></li>
-                    </ul>
-                </li>
-                <li><a>VIDEOS</a>
-                    <ul>
-                        <li><a href="Cartoons.html">CARTOONS</a></li>
-                        <li><a href="Anime.html">ANIME MOVIES</a></li>
-                        <li><a href="Film.html">BOOK FILMS</a></li>
-                    </ul>
-                </li>
-                <li><a>MORE OF US</a>
-                    <ul>
-                        <li><a href="AboutUs.html">ABOUT US</a></li>
-                        <li><a href="ContactUs.html">CONTACT US</a></li>
-                    </ul>
-                </li>
-                <li><a href="Submit.html">SUBMIT REVIEW</a></li>
-                
-      </ul>  
-    </div>
     
-
-    <div class="Sidenav" class="sidenav">
-        <a href="#one" id="oneS"><p>Rick and Morty</p></a>
-        <a href="#two" id="twoS"><p>Adventure Time</p></a>
-        <a href="#three" id="threeS"><p>Disenchantment</p></a>
-        <a href="#four" id="fourS"><p>Simpsons</p></a>
-    </div>
-
-    <div style="padding-top: 1vw; padding-bottom: 2vw;">
-        <div style="text-align: center;"class="videos">
-            <h3 id="one">Rick and Morty</h3>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLywi10C-ZbR03FaocOCw9RVG514cx4T51" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <hr style="border: 1px solid black">
-            <h3 id="two">Adventure Time</h3>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLNRIpq3d76AzQ-kyDf34xx1nK5ZIBYxPi" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <hr style="border: 1px solid black">
-            <h3 id="three">Disenchantment</h3>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLtJqnegXtqBZhPhk3D7Xzbpg1nRjvNw-i" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <hr style="border: 1px solid black">
-            <h3 id="four">Simpsons</h3>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLD2jdcxsDXGHFWOvrozDr3jTA23NeJdSo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <hr style="border: 1px solid black">
+        <div class="Sidenav" class="sidenav">
+            <a href="#one" id="oneS"><p>Rick and Morty</p></a>
+            <a href="#two" id="twoS"><p>Adventure Time</p></a>
+            <a href="#three" id="threeS"><p>Disenchantment</p></a>
+            <a href="#four" id="fourS"><p>Simpsons</p></a>
         </div>
-        
+    
+        <div style="padding-top: 1vw; padding-bottom: 4vw;">
+            <div style="text-align: center;"class="videos">
+                <h3 id="one">Rick and Morty</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLywi10C-ZbR03FaocOCw9RVG514cx4T51" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <hr style="border: 1px solid black">
+                <h3 id="two">Adventure Time</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLNRIpq3d76AzQ-kyDf34xx1nK5ZIBYxPi" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <hr style="border: 1px solid black">
+                <h3 id="three">Disenchantment</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLtJqnegXtqBZhPhk3D7Xzbpg1nRjvNw-i" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <hr style="border: 1px solid black">
+                <h3 id="four">Simpsons</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLD2jdcxsDXGHFWOvrozDr3jTA23NeJdSo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <hr style="border: 1px solid black">
+            </div>
+            
+        </div>
     </div>
-
+   
+    <div id="footer"><p id="date" style="color: black; text-align: left; line-height: 200%; font-weight:800; display: inline;">Date: XXXXXXXX</p><p style ="display: inline; font-weight: 800;" id="currUser"></p></div>
+    <script> setDateAndUser()</script>
 </body>
 </html>
