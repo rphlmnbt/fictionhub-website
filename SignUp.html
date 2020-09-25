@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/bbec1f8b2b.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <title>FictionHub - Explore Worlds</title>
+  </head>
+  <body onload="fadeOut()">
+    <div id="loader-wrapper">
+      <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+    <div class="container-fluid vh-100 p-0 m-0">
+      <div class="d-flex flex-column h-100">
+        <div class="d-flex align-items-center" id="banner">
+          <a class="mr-auto" href="Landing.html">
+            <img src="Images/FHLogo.png" class="bannerLogo">
+          </a>
+          <p id="loginBtn" class="p-0 m-0">
+            <a href="Login.html" class="text-body text-decoration-none">
+              LOG IN &#9661; &nbsp;
+            </a>
+          </p>
+        </div>
+        <nav id="nav" class="navbar navbar-expand-sm p-0">
+          <ul class="navbar-nav w-100 nav-justified">
+            <li class="nav-item">
+              <a class="nav-link" href="Home.html">HOME</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">BOOKS</a>
+                <div class="dropdown-menu dropdown-menu-right drop" id="books">
+                  <a class="dropdown-item" href="Novels.html">NOVELS</a>
+                  <a class="dropdown-item" href="Comics.html">COMICS</a>
+                  <a class="dropdown-item" href="Lightnovels.html">LIGHT NOVELS</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">VIDEOS</a>
+                <div class="dropdown-menu dropdown-menu-right drop" id="books">
+                  <a class="dropdown-item" href="Cartoons.html">CARTOONS</a>
+                  <a class="dropdown-item" href="Anime.html">ANIME MOVIES</a>
+                  <a class="dropdown-item" href="Film.html">BOOK FILMS</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">MORE OF US</a>
+                <div class="dropdown-menu dropdown-menu-right drop" id="books">
+                  <a class="dropdown-item" href="AboutUs.html">ABOUT US</a>
+                  <a class="dropdown-item" href="ContactUs.html">CONTACT US</a>
+                </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Submit.html">SUBMIT REVIEW</a>
+            </li>
+          </ul>
+        </nav>
+        <div class ="d-flex flex-grow-1">
+          <div class="m-auto pb-5 px-4 lisuBox">
+            <img src="Images/Login.png" id="avatar" class="d-block mx-auto p-0 mt-n5">  
+            <h2 class="text-center m-0">Sign Up</h2>
+            <form name="login" class="form" method="post">
+              <div class="form-group">
+                <label id="userlabel"><i class="fas fa-user"></i>&nbsp;&nbsp;&nbsp;Username</label>
+                <input type="text" class="form-control" name="name" onfocus="focusUser()" onblur="focusUserOut()">
+              </div>
+              <div class="form-group">
+                <label id="passlabel"><i class="fas fa-unlock"></i>&nbsp;&nbsp;&nbsp;Password</label>
+                <input type="password" class="form-control" name="password" id="password" onfocus="focusPass()" onblur="focusPassOut()">
+              </div>
+              <div class="form-group">
+                <label id="verpasslabel"><i class="fas fa-unlock-alt"></i>&nbsp;&nbsp;&nbsp; Verify Password</label>
+                <input type="password" class="form-control mb-2" name="verpassword" id="verpassword" onfocus="focusVer()" onblur="focusVerOut()">
+              </div>
+              <div class="form-group">
+                <label class="form-check-label">
+                  <input type="checkbox" onclick="showPassVer()">&nbsp;&nbsp;Show Password
+                </label>
+              </div>
+              <div class="form-group text-center">
+                <input type="submit" value="SIGN UP" onclick="return validateSignUp()">
+              </div>
+              <a style="color: black; font-size: 0.9rem;" href="Login.html">Back To Login</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
